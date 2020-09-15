@@ -23,24 +23,30 @@
 
       <ul class="lead">
         <li><a href="#network">Network</a></li>
-        <!-- <li><a href="#virtual-machine-image">Virtual machine image</a></li> -->
+        <li><a href="#vulnbox">Vulnbox</a></li>
+        <li><a href="#extra-instance">Extra instance</a></li>
         <li><a href="#flag-signatures">Flag​ ​signatures</a></li>
         <li><a href="#submitting-flags​">Submitting​ ​flags</a></li>
         <li><a href="#an-insight-into-acs">An​ ​insight​ ​into​ ​ACS</a></li>
       </ul>
 
       <h2 id="network" class="mt-4">Network</h2>
-      <p>Each team's network segment has the following address: <code>172.25.2xx.0/24</code>, where <strong>xx</strong> stands for a team's number (from 00 to 23). Extra instances are placed within each team's network segment.</p>
-      <p>Vulnbox instances have the following address: <code>10.13.37.2xx</code>.</p>
-      <p>Network traffic <strong>to</strong> vulnbox instances will be seen as originating from <code>10.20.20.188</code>. In other words, there is no way to detect whether network packets actually come from service checkers, other teams etc.</p>
-      <p>Network traffic <strong>from</strong> vulnbox instances will be seen as originating from <code>10.20.20.103</code>.</p>
+      <p>Each team's network segment has the following address: <code>172.25.2xx.0/24</code>, where <strong>xx</strong> stands for a team's number (from 00 to 23).</p>
       <p>Scoreboard URL (intranet): <a href="http://final.volgactf.ru/scoreboard" target="_blank" rel="noopener">final.volgactf.ru/scoreboard</a></p>
       <p>Scoreboard URL (public): <a href="https://live.volgactf.ru/scoreboard" target="_blank" rel="noopener">live.volgactf.ru/scoreboard</a></p>
 
-      <h2 id="virtual-machine-image" class="mt-4">Virtual machine image</h2>
+      <h2 id="vulnbox" class="mt-4">Vulnbox</h2>
       <!-- <p><a href="http://final.volgactf.ru/media/volgactf2019final.zip" target="_blank" rel="noopener">Vulnbox</a></p> -->
 <!--       <p style="font-variant: small-caps;">before launching the vulnbox, do not forget to regenerate your virtual machine instance mac address!</p> -->
+      <p>Vulnbox instances have the following address: <code>10.13.37.2xx</code>, where xx stands for a team's number (from 00 to 23).</p>
+      <p>Network traffic <strong>to</strong> vulnbox instances will be seen as originating from <code>10.20.20.188</code>. In other words, there is no way to detect whether network packets actually come from service checkers, other teams etc.</p>
+      <p>Network traffic <strong>from</strong> vulnbox instances will be seen as originating from <code>10.20.20.103</code>.</p>
       <p>A vulnbox is based on Ubuntu 18.04 x64 Server, all services are isolated from each other by the means of Docker. Containers start at boot.</p>
+
+      <h2 id="extra-instance" class="mt-4">Extra instance</h2>
+      <p>Extra instances are placed within each team's network segment, one for each team.</p>
+      <p>Make use of an <strong>extra instance</strong> so as to <strong>avoid network latency</strong> issues between the cloud infrastructure and your computers.</p>
+      <p>It is <strong>strongly recommended</strong> that you launch attacks and submit captured flags from an extra instance.</p>
 
 <!--       <h3 class="mt-3">LXC</h3>
       <p>
@@ -99,10 +105,9 @@
 
       <h2 id="submitting-flags​" class="mt-4">Submitting​ ​flags</h3>
       <p>
-        You should submit <strong>flags</strong> (not capsules!) to the following endpoint: <code>https://final.volgactf.ru</code>.
+        You should submit <strong>flags</strong> to the following endpoint: <code>https://final.volgactf.ru</code>.
       </p>
       <p><strong>ATTENTION! Flags submission attempts originating from vulnboxes won't be accepted by the system.</strong></p>
-      <p><strong>Please make use of your own devices and an extra instance provided by the organiser's team in order to submit flags.</strong></p>
       <p>Each flag's lifetime is 6 minutes.</p>
 
       <h3 class="mt-3">API</h3>
