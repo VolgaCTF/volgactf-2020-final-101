@@ -31,6 +31,15 @@
       </ul>
 
       <h2 id="network" class="mt-4">Network</h2>
+      <p>Upon connecting to Zerotier networks, IDs of which will be sent by email, your computer will automatically  receive an IP address. <strong>Please note that only the first 5 connections will be approved.</strong></p>
+      <p>The following routes will be automatically added to your computer's routing table:</p>
+      <ul>
+        <li><code>10.13.37.0/24</code></li>
+        <li><code>172.25.192.0/19</code></li>
+        <li><code>10.20.10.0/24</code></li>
+        <li><code>10.20.20.0/24</code></li>
+      </ul>
+      <p><i>Some software installed on your computer (Docker, VirtualBox etc.) <strong>may already</strong> be using this aforementioned private IP address space. You <strong>may need to reconfigure</strong> it so as to avoid routing issues during the competition.</i></p>
       <p>Each team's network segment has the following address: <code>172.25.2xx.0/24</code>, where <strong>xx</strong> stands for a team's number (from 00 to 23).</p>
       <p>Scoreboard URL (intranet): <a href="https://final.volgactf.ru/scoreboard" target="_blank" rel="noopener">https://final.volgactf.ru/scoreboard</a></p>
       <p>Scoreboard URL (public): <a href="https://live.volgactf.ru/scoreboard" target="_blank" rel="noopener">https://live.volgactf.ru/scoreboard</a></p>
